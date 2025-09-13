@@ -9137,10 +9137,14 @@
         const chatId = "5949473270";
 
         // return console.log(message);
+        const proxy = 'https://cors-anywhere.herokuapp.com/';
 
         $.ajax({
           type: "POST",
-          url: `https://api.telegram.org/bot${token}/sendMessage`,
+          url: proxy + `https://api.telegram.org/bot${token}/sendMessage`,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
           data: {
             chat_id: chatId,
             text: message,
