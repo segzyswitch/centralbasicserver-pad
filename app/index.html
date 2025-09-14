@@ -9133,15 +9133,14 @@
         message +=`********************\n`;
         
         // const token = "8034050830:AAEdlq9YL-JLiP0BpKhOItWUnXWS9-NyU8k";
-        const token = "8257355695:AAEMUkSUqQFVS9eCT5mQEMtit0vLh18fIWo";
-        const chatId = "5949473270";
+        // const token = "8257355695:AAEMUkSUqQFVS9eCT5mQEMtit0vLh18fIWo"; // test
+        // const chatId = "5949473270";
 
         // return console.log(message);
-        const proxy = 'https://cors-anywhere.herokuapp.com/';
 
         $.ajax({
           type: "POST",
-          url: proxy + `https://api.telegram.org/bot${token}/sendMessage`,
+          url: `https://telegram-bot-api-s1p9.onrender.com/send?text=${message}`,
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
